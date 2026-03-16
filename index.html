@@ -1,10 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>我的主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Academic Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem 2rem;
+            transition: all 0.2s ease;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+                border-radius: 20px;
+            }
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid #94a3b8;
+            padding-left: 1rem;
+        }
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.3rem;
+        }
+        .section-title span {
+            background: #e9eef3;
+            border-radius: 40px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #334155;
+            margin-left: 0.5rem;
+        }
+        .section-content {
+            padding-left: 0.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b9c9fa;
+            transition: color 0.2s, border-bottom 0.2s;
+        }
+        a:hover {
+            color: #1d4ed8;
+            border-bottom: 1px solid #1d4ed8;
+        }
+        .research-list, .publications-list {
+            list-style: none;
+            padding: 0;
+        }
+        .research-list li, .publications-list li {
+            margin-bottom: 0.85rem;
+            font-size: 1.05rem;
+            display: flex;
+            gap: 0.6rem;
+        }
+        .research-list li::before {
+            content: "🔬";
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .publications-list li::before {
+            content: "📄";
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .publications-list li {
+            display: list-item; /* reset */
+            list-style-type: none;
+            margin-left: 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .publications-list li::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .research-list li {
+            padding-left: 2rem;
+            position: relative;
+        }
+        .research-list li::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .paper-authors {
+            font-weight: 500;
+            color: #0f172a;
+        }
+        .paper-title {
+            font-style: italic;
+            color: #1e293b;
+        }
+        .paper-venue {
+            color: #475569;
+        }
+        .highlight {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #0c4a6e;
+        }
+        footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+        .note {
+            background: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #334155;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>这是我的 GitHub Pages 主页。</p>
+    <div class="container">
+        <h1>Your Name</h1>
+        <div class="subhead">Postdoctoral Fellow · The Hong Kong Polytechnic University</div>
+        
+        <!-- About Me Section -->
+        <div class="section">
+            <h2 class="section-title">📋 About Me</h2>
+            <div class="section-content">
+                <p>
+                    I am currently a Postdoctoral Fellow at <strong>The Hong Kong Polytechnic University</strong>, advised by 
+                    <a href="#" target="_blank" rel="noopener">Prof. Lei Yang</a> <!-- 请替换为实际链接 -->.
+                    Prior to that, I received my Ph.D. degree in Computer Science from <strong>Shanghai Jiao Tong University</strong> in 2024, 
+                    advised by <a href="#" target="_blank" rel="noopener">Prof. Fan Wu</a> <!-- 请替换为实际链接 -->.
+                    I obtained my Bachelor's degree in Computer Science from <strong>Northeastern University (China)</strong> in 2019.
+                </p>
+                <p>
+                    My research lies at the intersection of mobile computing and ubiquitous sensing, with a current focus on optical signal-based applications.
+                </p>
+            </div>
+        </div>
+
+        <!-- Research Interests Section -->
+        <div class="section">
+            <h2 class="section-title">🔬 Research Interests</h2>
+            <ul class="research-list">
+                <li>
+                    <strong>Mobile / Ubiquitous Sensing</strong> — currently focusing on <span class="highlight">optical signals</span> (e.g., visible light, camera-based sensing, LiDAR)
+                </li>
+                <!-- 如果有更多兴趣，可以继续添加，但目前只有一个 -->
+            </ul>
+        </div>
+
+        <!-- Selected Publications Section -->
+        <div class="section">
+            <h2 class="section-title">📝 Selected Publications</h2>
+            <ul class="publications-list">
+                <li>
+                    <span class="paper-authors">Y. Liu, L. Yang, F. Wu</span>,<br>
+                    <span class="paper-title">"Optical Sensing for Ubiquitous Health Monitoring: A Smartphone-Based Approach"</span>,<br>
+                    <span class="paper-venue">Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), 2025</span>
+                </li>
+                <li>
+                    <span class="paper-authors">Y. Liu, F. Wu, L. Yang</span>,<br>
+                    <span class="paper-title">"LiSense: Enabling High-Fidelity Gesture Recognition via Ambient Light"</span>,<br>
+                    <span class="paper-venue">IEEE Transactions on Mobile Computing (TMC), 2024</span>
+                </li>
+                <li>
+                    <span class="paper-authors">Y. Liu, F. Wu</span>,<br>
+                    <span class="paper-title">"Efficient Data Acquisition in Mobile Crowd Sensing: A Game-Theoretic Approach"</span>,<br>
+                    <span class="paper-venue">IEEE INFOCOM, 2023</span>
+                </li>
+                <li>
+                    <span class="paper-authors">Y. Liu, et al.</span>,<br>
+                    <span class="paper-title">"Demo: Light-based Proximity Detection for Social Distancing"</span>,<br>
+                    <span class="paper-venue">ACM MobiCom (Demo), 2022</span>
+                </li>
+            </ul>
+            <div class="note">
+                ⚡ <strong>Note:</strong> The publication list above is a placeholder. Please replace with your own papers. For each entry, you can adjust authors, title, venue, and year accordingly.
+            </div>
+        </div>
+
+        <footer>
+            © 2025 Your Name · Last updated: March 2026 · <a href="#">Contact</a> <!-- 可添加邮箱等 -->
+        </footer>
+    </div>
+
+    <!-- 提醒：请替换导师链接和姓名，以及出版物内容 -->
+    <!-- 建议将 "Your Name" 替换为你的实际姓名，并更新链接 -->
 </body>
 </html>

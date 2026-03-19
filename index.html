@@ -50,15 +50,15 @@
             margin-bottom: 0.25rem;  /* 与subhead保持紧凑 */
         }
         .title-row h1 {
-            margin-bottom: 0;        /* 移除h1原有底部边距，由row控制 */
-            font-size: 2.4rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            color: #0f172a;
-        }
-        .profile-photo {
-            width: clamp(70px, 12vw, 90px);   /* 响应式：最小70px，最大90px */
-            height: clamp(70px, 12vw, 90px);
+    margin-bottom: 0;
+    font-size: 3.2rem;   /* 原来为 2.4rem */
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+}
+       .profile-photo {
+    width: clamp(100px, 15vw, 150px);  /* 最小100px，首选15%视口宽度，最大150px */
+    height: clamp(100px, 15vw, 150px);
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #ffffff;
